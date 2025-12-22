@@ -1,0 +1,30 @@
+.dots{
+    background-color: #bb1515;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    display: inline-block;
+}
+.dot{
+    display: flex-row;
+    
+}
+.parent{
+    width: 20px;
+    height: 20px;
+    position: relative;
+   
+}
+
+.parent:hover .dots{
+    background: rgb(198, 189, 198);
+    
+}
+.parent:hover .parent2{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #bb1515;
+    position: absolute;
+
+}
