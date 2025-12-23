@@ -1,30 +1,54 @@
-.dots{
-    background-color: #bb1515;
-    width: 4px;
-    height: 4px;
-    border-radius: 50%;
-    display: inline-block;
-}
-.dot{
-    display: flex-row;
-    
-}
-.parent{
-    width: 20px;
-    height: 20px;
-    position: relative;
-   
+.parent {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  cursor: pointer;
 }
 
-.parent:hover .dots{
-    background: rgb(198, 189, 198);
-    
+.dots {
+  width: 5px;
+  height: 5px;
+  background: #bb1515;
+  border-radius: 50%;
+  z-index: 2;
 }
-.parent:hover .parent2{
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    border: 2px solid #bb1515;
-    position: absolute;
 
+.parent2 {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.parent2.animate {
+  animation: ripple 4s ease-out forwards;
+  
+}
+@keyframes ripple {
+  0% {
+    transform: scale(0.2);
+    opacity: 0.9;
+    border:0.1px solid #bb1515;
+  }
+
+  40% {
+    transform: scale(3);
+    opacity: 0.6;
+    border:0.6px solid #15bb3e;
+
+  }
+
+  70% {
+    transform: scale(6);
+    opacity: 0.3;
+    border:0.3px solid #ded00d;
+
+  }
+
+  100% {
+    transform: scale(10);
+    opacity: 0;
+    border:0.2px solid #dad7d7;
+
+  }
 }

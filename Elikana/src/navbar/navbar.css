@@ -1,0 +1,32 @@
+.nav .inner{
+    border-radius: 50%;
+    display: none;
+}
+
+.inner1{
+    background: linear-gradient(rgb(222, 45, 45),rgb(34, 173, 166));
+    border-radius: 24px;
+    animation: spin 5s linear infinite;
+    cursor: pointer;
+     box-shadow:
+    5px 5px 10px rgba(8, 0, 0, 0.5),
+    -5px -5px 5px rgba(16, 1, 1, 0.3);
+
+}
+@keyframes spin {
+    from {
+        rotatex: 0deg;
+    }
+    to {
+        rotate: 360deg;
+    }
+}
+.nav:hover .inner1{
+    display: none;
+}
+.nav:hover .inner{
+    display: block;
+}
+.nav:hover{
+     background: linear-gradient(to right, red, yellow);
+}

@@ -2,3 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+.nav{
+    position: fixed;
+    z-index: 1;
+}
+.name{
+    position: absolute;
+    z-index: 2;
+}
